@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed - Rede Social</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header">
+            <img src="https://cdn-icons-png.flaticon.com/512/1051/1051377.png" alt="Logo Pequena" class="header-logo">
+            <h1>Minha Rede Social</h1>
+        </header>
+
+        <main class="main">
+            <section class="create-post">
+                <input type="text" id="username" placeholder="Seu @usuario" />
+                <textarea id="postContent" placeholder="O que você está pensando?"></textarea>
+                
+                <div class="file-input-wrapper">
+                    <label for="postImage" class="custom-file-upload">
+                        <i class="fa-solid fa-image"></i> Adicionar Foto
+                    </label>
+                    <input type="file" id="postImage" accept="image/*" />
+                </div>
+
+                <button onclick="addPost()">Publicar</button>
+            </section>
+
+            <section class="feed">
+                <h2>Feed Recente</h2>
+                <div class="posts" id="posts">
+                    </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <i class="fa-solid fa-house active"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user"></i>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

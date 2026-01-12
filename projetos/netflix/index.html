@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem está assistindo?</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            background-color: #141414; /* Cor de fundo padrão da Netflix */
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        /* Título */
+        h1 {
+            font-weight: 400;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Container dos Perfis */
+        .profile-container {
+            display: flex;
+            gap: 20px; /* Espaço entre as imagens */
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* O item de perfil individual */
+        .profile-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            group: hover;
+        }
+
+        /* A Imagem do Perfil */
+        .avatar {
+            width: 150px;       /* Largura da imagem */
+            height: 150px;      /* Altura da imagem */
+            border-radius: 4px; /* Bordas levemente arredondadas */
+            object-fit: cover;  /* Garante que a imagem preencha o quadrado sem distorcer */
+            transition: all 0.3s ease; /* Animação suave */
+            border: 3px solid transparent; /* Borda invisível inicial */
+        }
+
+        /* Efeito ao passar o mouse (Hover) */
+        .profile-box:hover .avatar {
+            border-color: white; /* Borda branca igual a Netflix */
+            transform: scale(1.05); /* Aumenta levemente */
+        }
+
+        /* Botão Gerenciar Perfis */
+        .manage-btn {
+            background-color: transparent;
+            border: 1px solid #808080;
+            color: #808080;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .manage-btn:hover {
+            border-color: white;
+            color: white;
+        }
+
+        /* Ajuste para celulares */
+        @media (max-width: 800px) {
+            h1 { font-size: 2rem; }
+            .avatar { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quem está assistindo?</h1>
+
+    <div class="profile-container">
+        
+        <div class="profile-box">
+            <img src="cachorro.jpg" class="avatar" alt="Perfil 1">
+        </div>
+
+        <div class="profile-box">
+            <img src="shereka.jpg" class="avatar" alt="Perfil 2">
+        </div>
+
+        <div class="profile-box">
+            <img src="soldado.jpg" class="avatar" alt="Perfil 3">
+        </div>
+
+        <div class="profile-box">
+            <img src="lobo.jpg" class="avatar" alt="Perfil 4">
+        </div>
+
+        <div class="profile-box">
+            <img src="macaco.jpg" class="avatar" alt="Infantil">
+        </div>
+
+    </div>
+
+    <button class="manage-btn">Gerenciar perfis</button>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Desenvolvido por Jonathan Reis */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ebee; /* Cor de fundo mais suave */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+/* Container do App (imitando celular) */
+.app {
+    width: 375px;
+    height: 667px; /* Altura fixa para simular tela de celular */
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden; /* Esconde o que passar da borda */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 8px solid #333; /* Borda imitando celular */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+  
+/* --- Estilos da Tela de Entrada (index.html) --- */
+.entry-screen {
+    background: linear-gradient(135deg, #6200ea, #9d46ff);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-container img.main-logo {
+    width: 100px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.btn-enter {
+    margin-top: 50px;
+    padding: 15px 40px;
+    background: white;
+    color: #6200ea;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.btn-enter:active {
+    transform: scale(0.95);
+}
+
+/* --- Estilos do App Principal (inicio.html) --- */
+
+.header {
+    background-color: #6200ea; /* Roxo principal */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    width: 40px;
+    margin-bottom: 5px;
+}
+  
+.header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+  
+.main {
+    padding: 15px;
+    flex: 1;
+    overflow-y: auto; /* Permite rolar apenas o conteúdo */
+    background-color: #f0f2f5;
+}
+
+/* Criar Post */
+.create-post {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+  
+.create-post input[type="text"],
+.create-post textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    background: #f9f9f9;
+}
+
+.create-post textarea {
+    resize: none;
+    height: 60px;
+}
+
+/* Estilo para input de arquivo escondido */
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #6200ea;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+  
+.create-post button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6200ea;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+  
+.create-post button:hover {
+    background-color: #3700b3;
+}
+  
+/* Feed e Posts */
+.feed h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.post {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+  
+.post .header {
+    background: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0;
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+  
+.post .content {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+  
+.post img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+}
+  
+.post .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+  
+.post .actions button {
+    background: none;
+    border: none;
+    color: #6200ea;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Barra de Navegação Inferior (Novo detalhe) */
+.bottom-nav {
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+.bottom-nav i {
+    font-size: 1.2rem;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.bottom-nav i.active {
+    color: #6200ea;
+}
