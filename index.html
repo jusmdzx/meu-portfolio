@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Juliana Miiranda</title>
+    
+    <style>
+        /* AQUI É O CSS: A "MAQUIAGEM" DO SITE */
+        
+        /* Variáveis de cores (para facilitar trocas futuras) */
+        :root {
+            --fundo: #0f172a;       /* Azul muito escuro */
+            --texto: #e2e8f0;       /* Cinza claro */
+            --destaque: #38bdf8;    /* Azul neon */
+            --cartao: #1e293b;      /* Azul acinzentado */
+        }
+
+        body {
+            font-family: sans-serif; /* Fonte simples */
+            background-color: var(--fundo);
+            color: var(--texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Configuração do container central (para nada ficar colado na borda) */
+        .container {
+            max-width: 900px;
+            margin: 0 auto; /* Centraliza no meio da tela */
+            padding: 2rem;
+        }
+
+        /* Estilo dos Títulos */
+        h1, h2, h3 { color: var(--destaque); }
+        
+        /* Estilo da Hero Section (Abertura) */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        /* Estilo da Grade de Projetos (Grid) */
+        .grid-projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px; /* Espaço entre os cartões */
+        }
+
+        /* Estilo de cada Cartão de Projeto */
+        .card {
+            background-color: var(--cartao);
+            padding: 20px;
+            border-radius: 10px; /* Bordas arredondadas */
+            border: 1px solid #334155;
+        }
+
+        /* Estilo das etiquetas (Tags) */
+        .tag {
+            background-color: #334155;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        /* Estilo dos Links/Botões */
+        a.botao {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--destaque);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--destaque);
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        a.botao:hover {
+            background-color: var(--destaque);
+            color: var(--fundo); /* Inverte a cor ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <section class="hero">
+            <h1>Olá, sou Juliana Miiranda</h1>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (UniGrande) e Técnico (SENAI).</p>
+            <p>Focada em PHP, Banco de Dados e Desenvolvimento Web.</p>
+        </section>
+
+        <hr style="opacity: 0.2;">
+
+        <section>
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou apaixonada por tecnologia e estou em transição de carreira. 
+                Atualmente, divido meu tempo entre meu trabalho e meus estudos intensivos de programação.
+                Busco oportunidades como Desenvolvedora Júnior ou Freelancer para aplicar meus conhecimentos em 
+                <strong>PHP</strong>, <strong>MySQL</strong> e <strong>Front-end</strong>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Meus Projetos</h2>
+            <div class="grid-projetos">
+
+                <div class="card">
+                    <h3>Netflix Clone</h3>
+                    <p>Replicação da interface da Netflix para treinar posicionamento e CSS Grid.</p>
+                    <div style="margin-bottom:10px">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                    <a href="projetos/netflix/index.html" target="_blank" class="botao">Ver Site Online</a>
+                </div>
+
+                <div class="card">
+                    <h3>Minha Rede Social</h3>
+                    <p>Conceito visual de feed e perfil de usuário.</p>
+                    <div style="margin-bottom:10px">
+                        <span class="tag">Design</span>
+                        <span class="tag">Front-end</span>
+                    </div>
+                    <a href="projetos/rede-social/index.html" target="_blank" class="botao">Ver Site Online</a>
+                </div>
+
+                <div class="card">
+                    <h3>Sistema de Cadastro</h3>
+                    <p>CRUD completo (Criar, Ler, Editar, Deletar) integrado com Banco de Dados.</p>
+                    <div style="margin-bottom:10px">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <a href="https://github.com/jusmdzx" target="_blank" class="botao">Ver Código no GitHub</a>
+                </div>
+
+                <div class="card">
+                    <h3>Jogo: O Outro Mundo</h3>
+                    <p>Aventura interativa baseada em lógica de programação.</p>
+                    <div style="margin-bottom:10px">
+                        <span class="tag">Lógica</span>
+                        <span class="tag">Game Dev</span>
+                    </div>
+                    <a href="https://github.com/jusmdzx/coraline-fuga-do-tunel" target="_blank" class="botao">Ver Repositório</a>
+                </div>
+
+                <div class="card">
+                    <h3>E-commerce System</h3>
+                    <p>Plataforma de vendas robusta com painel administrativo.</p>
+                    <div style="margin-bottom:10px">
+                        <span class="tag">PHP Avançado</span>
+                        <span class="tag">Segurança</span>
+                    </div>
+                    <a href="https://github.com/jusmdzx" target="_blank" class="botao">Ver Código no GitHub</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 4rem; margin-bottom: 4rem;">
+            <h2>Contato</h2>
+            <p>
+                <a href="https://github.com/jusmdzx" class="botao">GitHub</a>
+                <a href="mailto:seuemail@gmail.com" class="botao">Enviar E-mail</a>
+            </p>
+        </section>
+
+    </div>
+
+</body>
+</html>
