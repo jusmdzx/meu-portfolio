@@ -10,7 +10,7 @@ Este portfólio foi construído para demonstrar minha evolução técnica em **P
 ---
 
 ## 🌐 Acesse o Portfólio Online
-👉 **[Clique aqui para ver o site funcionando](https://jusmdzx.github.io/meu-portfolio/)**
+👉 **[Clique aqui para ver o site funcionando](https://github.com/jusmdzx/meu-portfolio.git)**
 
 ---
 
